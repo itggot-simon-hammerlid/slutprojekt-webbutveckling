@@ -46,7 +46,8 @@ body {
 }
 
 .startcontainer > footer > p {
-    font-family: 'Italiana', serif;  
+    font-family: 'Italiana', serif; 
+    color: black; 
 }
 
 
@@ -277,6 +278,7 @@ input {
     grid-row: 2/6;
     background-position: center center;
     background-repeat: no-repeat;
+    position: static;
 }
 
 .pizzapicture.hidden {
@@ -369,20 +371,27 @@ div.pepperoni {
     .drumpdalk {
         grid-row: 9/10;
         grid-column: 3/7;
-        background-color: black;
+        background-color: darkorange;
+        visibility: visible;
     }
 
     .drumpdalk > p {
-        font-size: 8px;
+        font-size: 10px;
+        color: white;
+        font-family: 'Italiana', serif; 
+        text-align: center; 
     }
 
     .trump {
         grid-row: 6/9 ;
         grid-column: 3/7 ;
-        background-image: url(../img/dtrump.png); 
+        background-image: url(../img/drump.png); 
         background-image: black;
         visibility: visible;
-        z-index: 99;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        
     }
 
     .ramtalk {
@@ -461,25 +470,34 @@ div.pepperoni {
         font-size: 16px;
     }
 
-    .margharita > p {
+    div.margharita > p {
         font-size: 10px;
     }
 
-    .margharita {
+    div.margharita {
         grid-column: 2/4 ;
         grid-row: 2/2 ;
+        src: url(../img/smallmargharita.png);
     }
 
-    .hawaii > p {
+    div.hawaii > p {
         font-size: 10px;
-        grid-column: ;
-        grid-row: ;
     }
 
-    .pepperoni > p {
+    div.hawaii {
+        grid-column: 3/6;
+        grid-row: 4/4;
+        src: url(../img/smallhawaii.png);
+    }
+
+    div.pepperoni > p {
         font-size: 10px;
-        grid-column: ;
-        grid-row: ;
+    }
+
+    div.pepperoni {
+        grid-column: 5/7;
+        grid-row: 2/2;
+        src: url(../img/smallpepperoni.png);
     }
 
     img {
