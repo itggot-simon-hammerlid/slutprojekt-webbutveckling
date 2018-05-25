@@ -1,15 +1,23 @@
 <div class="pizzacontainer">
 
-    <header><h1>Skapa</h1></header>
+    <header><h1>Välj pizza</h1></header>
 
-    <div class="custom"></div>
+    <img src="img/margharita.png" class="pizzapicture margharita hidden" onclick ="hidePizza('margharita')"alt="">
+
+    <img src="img/hawaii.png" class="pizzapicture hawaii hidden" onclick ="hidePizza('hawaii')"alt="">
+
+    <img src="img/pepperoni.png" class="pizzapicture pepperoni hidden" onclick ="hidePizza('pepperoni')"alt="">
+
+    <div class="pepperoni" onclick="showPizza('pepperoni')"><p>Pepperoni pizza</p></div>
+
+    <div class="margharita" onclick="showPizza('margharita')"><p>Margharita pizza</p></div>
+
+    <div class="hawaii" onclick="showPizza('hawaii')"><p>Hawaii pizza</p></div>
 
     <div class="buy"><a href="checkout.html">
             <p>Beställ</p> 
         </a>
     </div>
-
-    <div class="ham"></div>
 
     <footer>
         <p>© 2018 PizzaOnline AB</p>

@@ -1,9 +1,9 @@
 before 'index.html.erb' do
-    @title = "Gamling Rehab"
+    @title = "Welcome"
 end
 
-before 'pizzasida.erb' do
-    @title = "Välkommen till Pizza Online"
+before 'pizzasida.html.erb' do
+    @title = "Pizza"
 end
 
 before 'checkout.html.erb' do

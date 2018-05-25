@@ -20,7 +20,6 @@ body {
     grid-column: 1/8 ;
     grid-row: 1/2 ;
     font-family: 'Italiana', serif; 
-    border: 2px blue solid; 
     font-weight: bold;
 }
 
@@ -39,6 +38,7 @@ body {
 .checkcontainer > header > h1 {
     font-family: 'Italiana', serif;  
     text-align: center ;
+    color: darkgreen;   
 }
 
 .checkcontainer > footer > p {
@@ -63,7 +63,9 @@ body {
     height: 100vh;
     grid-template-columns: repeat(7, 1fr) ;
     grid-template-rows: repeat(12, 1fr) ;
-    background-color: #DC304B;
+    background-image: url(../img/flag.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .startcontainer {
@@ -166,18 +168,9 @@ body {
 }
 
 
-
-.custom {
-    grid-column: 3/6;
-    grid-row: 2/6;
-    background-image: url(../img/pizzaicon2.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
 .buy {
     grid-row: 6/7;
-    grid-column: 3/6;
+    grid-column: 4/5;
     background-color: blue;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
@@ -193,6 +186,31 @@ body {
     text-decoration: none;
 }
 
+.buy:hover > a {
+    font-size: 30px;
+    transition: 0.2s;
+}
+
+input {
+    grid-column: 3/6;
+    text-align: center;
+}
+
+.banknum {
+    grid-row: 4/5;  
+}
+
+.namn {
+    grid-row: 2/3;
+}
+
+.utgår {
+    grid-row: 6/7;
+}
+
+.cvc {
+    grid-row: 8/9;
+}
 
 .pizzabild {
     grid-column: 3/7;
@@ -253,7 +271,83 @@ body {
     font-weight: bold;
 }
 
+.pizzapicture {
+    z-index: 90;
+    grid-column: 4/5;
+    grid-row: 2/6;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 
+.pizzapicture.hidden {
+    display: none;
+}
+
+div.margharita {
+    grid-row: 3/5;
+    grid-column: 2/3;
+    background-color: red;
+}
+
+div.hawaii {
+    grid-row: 3/5;
+    grid-column: 4/5;
+    background-color: green;
+}
+
+div.pepperoni {
+    grid-row: 3/5;
+    grid-column: 6/7;
+    background-color: white;
+}
+
+.pepperoni > p {
+    text-align: center;
+    font-family: 'Italiana', serif; 
+}
+
+.hawaii > p {
+    text-align: center;
+    font-family: 'Italiana', serif; 
+}
+
+.margharita > p {
+    text-align: center;
+    font-family: 'Italiana', serif; 
+}
+
+
+.check {
+    grid-column: 3/6;
+    grid-row: 9/11;
+    background-color: blue;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    text-align: center;
+    font-family: 'Italiana', serif;     
+}
+
+.check > a {
+    color: white;
+    text-decoration: none;  
+}
+
+.check:hover {
+    font-size: 140%;
+    transition: 0.2s;
+}
+
+.trump {
+    grid-row: 6/9 ;
+    grid-column: 3/7 ;
+    visibility: hidden;
+}
+
+.drumpdalk {
+    grid-row: 9/10;
+    grid-column: 3/7;
+    visibility: hidden;
+}
 
 @media only screen and (max-device-width: 400px){
     body {
@@ -264,24 +358,45 @@ body {
         grid-column: 7/9;
         grid-row: 7/8;
         margin: 0px;
-        display: none;
+        visibility: hidden;
     }
 
     .bartalk > p {
         font-size: 6px;
+        visibility: hidden;
+    }
+
+    .drumpdalk {
+        grid-row: 9/10;
+        grid-column: 3/7;
+        background-color: black;
+    }
+
+    .drumpdalk > p {
+        font-size: 8px;
+    }
+
+    .trump {
+        grid-row: 6/9 ;
+        grid-column: 3/7 ;
+        background-image: url(../img/dtrump.png); 
+        background-image: black;
+        visibility: visible;
+        z-index: 99;
     }
 
     .ramtalk {
         grid-column: 1/3;
         grid-row: 7/8;
         margin: 0px;
-        display: none;
+        visibility: hidden;
         
     }
 
     .ramtalk >p {
         font-size: 6px;
         margin-top: 10px;
+        visibility: hidden;
     }
 
     .startcontainer > header > .logotyp {
@@ -289,7 +404,6 @@ body {
     }
 
     .pizzabild {
-    max-width: 100%;
     height: auto;
     grid-row: 3/6;
     grid-column: 2/8;
@@ -299,19 +413,14 @@ body {
     background-image: url(../img/mobileflag.jpg);
     background-position: center center;
     }
+    
 
     .obama {
-        max-width: 100%;
-        height: auto;
-        grid-row: 6/10;
-        grid-column: 6/9;
+        display: none;
     }
 
     .gramsey {
-        max-width: 100%;
-        height: auto;
-        grid-row: 6/10;
-        grid-column: 1/4;
+        display: none;
     }
 
     .start > a {
@@ -335,12 +444,50 @@ body {
         grid-column: 3/7;
     }
 
-    .mobilebox {
-        grid-row: 8/10;
-        grid-column: 4/6;
-        font-size: 8px;
-        margin: 4px;
+    .checkcontainer {
+        background-image: url(../img/mobileflag.jpg);
     }
+
+    .pizzacontainer {
+        background-image: url(../img/mobileflag.jpg);
+        background-position: center center;
+    }
+
+    .pizzacontainer > header > h1 {
+        font-size: 16px;
+    }
+
+    .buy > a > p {
+        font-size: 16px;
+    }
+
+    .margharita > p {
+        font-size: 10px;
+    }
+
+    .margharita {
+        grid-column: 2/4 ;
+        grid-row: 2/2 ;
+    }
+
+    .hawaii > p {
+        font-size: 10px;
+        grid-column: ;
+        grid-row: ;
+    }
+
+    .pepperoni > p {
+        font-size: 10px;
+        grid-column: ;
+        grid-row: ;
+    }
+
+    img {
+        grid-column: 3/6;
+        grid-row: 2/5;
+    }
+
+
 
  
 }
