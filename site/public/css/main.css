@@ -251,7 +251,7 @@ input {
 .obama {
     grid-column: 7/9;
     grid-row: 3/7;
-    background-image: url(../img/Obama_chef2.png);
+    background-image: url(../img/Obama_chef.png);
     background-repeat: no-repeat;
     background-position: center center;
 }
